@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class App {
+	public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter Number: ");
+        int number = input.nextInt();
+        for (int weng = 1; weng <= number; weng++) {
+
+            for(int j = number - weng; j > 0; j--) {
+                System.out.print(" ");
+            }
+        
+            for(int k = 1; k <= weng; k++) {
+                System.out.print("* ");
+            }
+
+            System.out.println();
+        }
+    }
+}
