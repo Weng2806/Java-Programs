@@ -1,0 +1,18 @@
+public class Main {
+	public static void main(String[] args) {
+	    int number[] = {1,2,3,4,5};
+        reversed(number, number.length);
+	}	
+	
+	static void reversed(int numbers[], int a) {
+        for (int p = 0; p < a / 2; p++) {
+            numbers[p] = numbers[p] ^ numbers[a - 1 - p];
+            numbers[a - 1 - p] =  numbers[p] ^ numbers[a - 1 - p];
+            numbers[p] = numbers[p] ^ numbers[a - 1 - p];
+        }
+        for (int pamaran : numbers) {
+        System.out.print(pamaran + " ");
+        }
+	}
+}
+// nagrereturn  kung magkakaiba, XOR
