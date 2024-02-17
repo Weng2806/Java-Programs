@@ -1,0 +1,13 @@
+import java.util.Scanner;
+class App {
+    static void weng(String names) {
+        Scanner weng = new Scanner(System.in);
+        System.out.println("Enter your name: ");
+        String name = weng.nextLine();
+        System.out.println(names + name);
+
+    }
+    public static void main(String[] args) {
+        weng("Hello, ");
+    }
+}
