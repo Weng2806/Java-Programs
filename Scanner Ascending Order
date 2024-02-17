@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+    Scanner weng = new Scanner(System.in);
+        System.out.println("Please enter 3 numbers:");
+        int num1 = weng.nextInt();
+        int num2 = weng.nextInt();
+        int num3 = weng.nextInt();
+
+        int x;
+        
+        if (num1 > num2) {
+            x = num1;
+            num1 = num2;
+            num2 = x;
+        }
+            if (num2 > num3) {
+                x = num2;
+                num2 = num3;
+                num3 = x;
+            }
+                if (num1 > num2) {
+                    x = num1;
+                    num1 = num2;
+                    num2 = x;
+                }
+                System.out.println("In ascending order: " + num1 + ", " + num2 + ", " + num3);
+    }
+}
