@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+public class App {
+    static int firstNum;
+    static int secondNum;
+// input
+    static void Number() {
+        Scanner firstNumber = new Scanner(System.in);
+       
+        System.out.print("Please enter a number: ");
+        firstNum = firstNumber.nextInt();
+       
+        System.out.print("Please enter another number: ");
+        secondNum = firstNumber.nextInt(); 
+    }
+// output
+    static void Operation() {
+        Scanner op = new Scanner(System.in);
+        System.out.println("Please enter operation: \n 1 = + \n 2 = - \n 3 = * \n 4 = / ");
+        int operation = op.nextInt();
+        if (operation == 1) {
+            System.out.println("Sum is: " + Addition(firstNum, secondNum) + " 🙂");
+        }
+        else if (operation == 2) {
+            System.out.println("Difference is: " + Subtraction(firstNum, secondNum) + " 🙂");
+        }
+        else if (operation == 3) {
+            System.out.println("Product is: " + Multiplication(firstNum, secondNum) + " 🙂");
+        }
+        else if (operation == 4){
+            System.out.println("Quotient is: " + Division(firstNum, secondNum) + " 🙂");
+        }
+        else {
+            System.out.println("invalid output! ");
+        }
+    }
+     
+// process
+    static int Addition(int a, int b) {
+        int sum = a + b;
+        return sum;
+    }
+    
+    static int Subtraction(int a, int b) {
+        int diff = a - b;
+        return diff;
+    }
+    
+    static int Multiplication(int a, int b) {
+        int product = a * b;
+        return product;
+    }
+    
+    static int Division(int a, int b) {
+        int quotient = a / b;
+        return quotient;
+    }
+    public static void main(String[] args)  {
+        Number();
+        Operation();    
+    }
+}
