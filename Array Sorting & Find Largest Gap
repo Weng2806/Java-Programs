@@ -1,0 +1,44 @@
+public class quiz {
+    public static void main(String[] args) {
+        int[] gap = {14, 13, 7, 1, 4, 12, 3, 7, 7, 12, 11, 5, 7};
+        swap(gap);
+        System.out.println("Array in ascending order:");
+        array(gap);
+        largestGap(gap);
+    }
+
+    static void swap(int[] gap) {
+        int n = gap.length;
+        for (int i = 0; i < n - 1; i++) {
+            int min = i;
+            for (int j = i + 1; j < n; j++) {
+                if (gap[j] < gap[min]) {
+                    min = j;
+                }
+            }
+
+            int a = gap[i];
+            gap[i] = gap[min];
+            gap[min] = a;
+
+        }
+    }
+
+    static void array(int[] gap) {
+        for (int value : gap) {
+            System.out.print(value + " ");
+        }
+
+        System.out.println();
+    }
+    static void largestGap(int[] gap) {
+        int gapz = 0;
+        for(int i = 1; i < gap.length; i++) {
+            int gapss = gap[i] - gap[i - 1];
+                if (gapss > gapz) {
+                    gapz = gapss;
+                }
+        }
+        System.out.println("Largest gap is: " + gapz);
+    }
+}
