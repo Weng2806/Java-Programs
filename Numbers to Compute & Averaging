@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class App {
+    public static void main(String[] args) {
+        Input();
+    }
+
+    static void Input() {
+        Scanner p = new Scanner(System.in);
+        System.out.print("How many numbers to compute?: ");
+
+        int Compute = p.nextInt();
+
+        double sum = 0;
+
+        sum = Process(p, Compute, sum);
+        double average = sum / Compute;
+        // yung a is yung compute na kung ilan iaaverage, b naman is average ng sum and ng compute.
+
+        Output(Compute, average);
+    }
+
+    static double Process(Scanner numbers, int Compute, double sum) {
+        for (int w = 1; w <= Compute; w++) {
+            System.out.print("Input Number " + w + ": ");
+            double values = numbers.nextInt();
+            sum += values;
+        }
+        return sum;
+    }
+
+    static void Output(int a, double b) {
+        System.out.println("The average of " + a + " numbers are: " + b);
+    }
+}
