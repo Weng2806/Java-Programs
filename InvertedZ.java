@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class zTabingi {
+public class InvertedZ {
     public static void main(String[] args) throws Exception {
     Scanner input = new Scanner(System.in);
         
